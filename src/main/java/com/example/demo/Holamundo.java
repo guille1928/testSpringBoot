@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Holamundo {
+
+    private final CalculadoraService calculadoraService;
+
+
+    Holamundo(CalculadoraService calculadoraService) {
+        this.calculadoraService = calculadoraService;
+    }
 
 	
 	@GetMapping("/hola")
@@ -27,4 +35,17 @@ public class Holamundo {
 			);	
 	}
 	
-}
+	@GetMapping("/array")
+	public List<Numeros> muestra (){
+		return List.of(
+				new CalculadoraService().setNumbers()
+				);
+		
+		
+		
+	}
+		
+		
+	}
+	
+
