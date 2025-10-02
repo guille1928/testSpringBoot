@@ -43,11 +43,6 @@ public class Holamundo {
 		
 	}
 
-	@GetMapping("/calculo")
-	public List<ArraysNums> lista (){
-		return List.of (new CalculadoraService().calculoTotal(array));	
-		
-	}
 	
 	
 	
