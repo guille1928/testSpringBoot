@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+
+
 public class Holamundo {
 
     private final CalculadoraService calculadoraService;
@@ -39,13 +39,36 @@ public class Holamundo {
 	public List<Numeros> muestra (){
 		return List.of(
 				new CalculadoraService().setNumbers()
-				);
-		
-		
+				);	
 		
 	}
+
+	@GetMapping("/calculo")
+	public List<ArraysNums> lista (){
+		return List.of (new CalculadoraService().calculoTotal(array));	
 		
-		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
 	
 
